@@ -39,11 +39,11 @@ List<CountryModel> getCountryList() {
 List<ShiftingServiceModel> getShiftingServiceList() {
   List<ShiftingServiceModel> list = [];
   list.add(ShiftingServiceModel(
-      title: 'House', imagePath: ic_house, color: Colors.red));
+      title: 'Rumah', imagePath: ic_house, color: Colors.red));
   list.add(ShiftingServiceModel(
-      title: 'Office', imagePath: ic_office, color: secondaryColor));
+      title: 'Kantor', imagePath: ic_office, color: secondaryColor));
   list.add(ShiftingServiceModel(
-      title: 'Commercial', imagePath: ic_commercial, color: Colors.blue));
+      title: 'Umum', imagePath: ic_commercial, color: Colors.blue));
   return list;
 }
 
@@ -52,7 +52,7 @@ List<OfferAndNewsModel> getOfferAndNewsList() {
   list.add(OfferAndNewsModel(
       title: 'Trending', images: [offer_image1, offer_image2]));
   list.add(OfferAndNewsModel(
-      title: 'Promotion', images: [offer_image3, offer_image4]));
+      title: 'Promosi', images: [offer_image3, offer_image4]));
   list.add(OfferAndNewsModel(
       title: 'Summer Offer', images: [offer_image5, offer_image6]));
   list.add(OfferAndNewsModel(
@@ -86,18 +86,18 @@ List<HistoryModel> getHistoryList() {
 List<ShiftingServiceModel> getOtherServicesList() {
   List<ShiftingServiceModel> list = [];
   list.add(ShiftingServiceModel(
-      title: 'Cleaning',
+      title: 'Bersih Rumah',
       color: greenColor,
       imagePath: ic_cleaning,
       newData: true,
       widget: CleaningServiceScreen(title: 'Cleaning')));
   list.add(ShiftingServiceModel(
-      title: 'Vehicle',
+      title: 'Kendaraan',
       color: Colors.purple,
       imagePath: ic_vehicle,
       widget: VehicleServiceScreen()));
   list.add(ShiftingServiceModel(
-      title: 'Labour Service',
+      title: 'layanan tenaga kerja',
       color: Colors.blue,
       imagePath: ic_labour,
       widget: CleaningServiceScreen(title: 'Labour')));

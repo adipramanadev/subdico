@@ -22,7 +22,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       children: [
         Padding(
           padding: EdgeInsets.all(16),
-          child: Text('Today', style: hsBoldTextStyle()),
+          child: Text('Hari Ini', style: hsBoldTextStyle()),
         ),
         Divider(color: Theme.of(context).dividerColor, thickness: 2, height: 0),
         Expanded(
