@@ -34,7 +34,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 int index = notificationList.indexOf(mData);
                 return AnimationConfiguration.staggeredList(
                   position: index,
-                  duration: Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
                   child: SlideAnimation(
                     horizontalOffset: 44.0,
                     child: FadeInAnimation(

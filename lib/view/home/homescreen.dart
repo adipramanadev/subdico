@@ -56,7 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 8),
+            padding:
+                const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 8),
             child: Text('Penawaran & Berita', style: hsBoldTextStyle()),
           ),
           SingleChildScrollView(
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     int index = offerAndNewList.indexOf(item);
                     return AnimationConfiguration.staggeredList(
                       position: index,
-                      duration: Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
                       child: SlideAnimation(
                         horizontalOffset: 44.0,
                         child: FadeInAnimation(
@@ -121,7 +122,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 16, top: 16, bottom: 8, right: 16),
+            padding:
+                const EdgeInsets.only(left: 16, top: 16, bottom: 8, right: 16),
             child: Text('Layanan Lainnya', style: hsBoldTextStyle()),
           ),
           Container(
@@ -137,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
         ],
       ),
     );

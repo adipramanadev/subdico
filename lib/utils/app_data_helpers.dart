@@ -15,16 +15,34 @@ import 'app_constants.dart';
 
 List<NavigationItemModel> getNavigationItems() {
   List<NavigationItemModel> list = [];
-  list.add(NavigationItemModel(
-      icon: Icons.home, title: 'Home', widget: HomeScreen()));
-  list.add(NavigationItemModel(
-      icon: Icons.history, title: 'History', widget: HistoryScreen()));
-  list.add(NavigationItemModel(
+  list.add(
+    NavigationItemModel(
+      icon: Icons.home,
+      title: 'Home',
+      widget: const HomeScreen(),
+    ),
+  );
+  list.add(
+    NavigationItemModel(
+      icon: Icons.history,
+      title: 'History',
+      widget: HistoryScreen(),
+    ),
+  );
+  list.add(
+    NavigationItemModel(
       icon: Icons.notifications,
       title: 'Notification',
-      widget: NotificationScreen()));
-  list.add(NavigationItemModel(
-      icon: Icons.person, title: 'Profile', widget: ProfileScreen()));
+      widget: NotificationScreen(),
+    ),
+  );
+  list.add(
+    NavigationItemModel(
+      icon: Icons.person,
+      title: 'Profile',
+      widget: ProfileScreen(),
+    ),
+  );
   return list;
 }
 

@@ -7,7 +7,14 @@ import '../utils/app_colors.dart';
 import '../utils/app_data_helpers.dart';
 import 'notification/notifications_screen.dart';
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
+
+  @override
+  State<DashboardScreen> createState() => _DashboardScreenState();
+}
+
+class _DashboardScreenState extends State<DashboardScreen> {
   int selectedIndex = 0;
   List<NavigationItemModel> navigationItemList = getNavigationItems();
 
