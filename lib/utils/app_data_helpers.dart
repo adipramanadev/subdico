@@ -11,7 +11,7 @@ import 'app_constants.dart';
 
 List<CountryModel> getCountryList() {
   List<CountryModel> list = [];
-  list.add(CountryModel(title: "India (+91)", imagePath: ic_india));
+  list.add(CountryModel(title: "Indonesia (+62)", imagePath: ic_indo));
   list.add(CountryModel(title: "United States (+1)", imagePath: ic_us));
   list.add(CountryModel(title: "United Kingdom (+92)", imagePath: ic_uk));
   return list;

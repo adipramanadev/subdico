@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class FaqScreen extends StatefulWidget {
   const FaqScreen({super.key});
 
@@ -13,4 +12,4 @@ class _FaqScreenState extends State<FaqScreen> {
   Widget build(BuildContext context) {
     return const Placeholder();
   }
-},
+}

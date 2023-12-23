@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:subdico/view/auth/welcomescreen.dart';
 
+import '../utils/app_common.dart';
+
 class SplasScreen extends StatefulWidget {
   const SplasScreen({super.key});
 
@@ -33,6 +35,15 @@ class _SplasScreenState extends State<SplasScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle(
+          statusBarColor: Theme.of(context).scaffoldBackgroundColor,
+          statusBarIconBrightness: Brightness.dark),
+      child: Scaffold(
+        body: Center(
+          child: Text('Home Service', style: hsBoldTextStyle(size: 30)),
+        ),
+      ),
+    );
   }
 }
