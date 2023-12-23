@@ -3,6 +3,8 @@ import 'package:subdico/models/submodel.dart';
 import 'package:subdico/utils/app_assets.dart';
 import 'package:subdico/utils/app_colors.dart';
 
+import '../view/home/cleaning_service.dart';
+import '../view/home/vechilescreen.dart';
 import '../view/profile/addsocialaccount.dart';
 import '../view/profile/faq_screen.dart';
 import 'app_constants.dart';
@@ -69,22 +71,22 @@ List<ShiftingServiceModel> getOtherServicesList() {
       color: greenColor,
       imagePath: ic_cleaning,
       newData: true,
-      widget: HSCleaningServiceScreen(title: 'Cleaning')));
+      widget: CleaningServiceScreen(title: 'Cleaning')));
   list.add(ShiftingServiceModel(
       title: 'Vehicle',
       color: Colors.purple,
       imagePath: ic_vehicle,
-      widget: HSVehicleServiceScreen()));
+      widget: VehicleServiceScreen()));
   list.add(ShiftingServiceModel(
       title: 'Labour Service',
       color: Colors.blue,
       imagePath: ic_labour,
-      widget: HSCleaningServiceScreen(title: 'Labour')));
+      widget: CleaningServiceScreen(title: 'Labour')));
   list.add(ShiftingServiceModel(
       title: 'Painting',
       color: Colors.pink,
       imagePath: ic_painting,
-      widget: HSCleaningServiceScreen(title: 'Painting')));
+      widget: CleaningServiceScreen(title: 'Painting')));
   return list;
 }
 
