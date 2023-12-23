@@ -7,6 +7,7 @@ import 'package:otp_text_field/style.dart';
 
 import '../../utils/app_colors.dart';
 import '../../utils/app_common.dart';
+import 'loginscreen.dart';
 
 class OtpVersifications extends StatefulWidget {
   const OtpVersifications({super.key});
@@ -97,14 +98,14 @@ class _OtpVersificationsState extends State<OtpVersifications> {
               height: 50,
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) {
-                  //       return LoginScreen();
-                  //     },
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return LoginScreen();
+                      },
+                    ),
+                  );
                 },
                 child: Text('Kirim',
                     style: hsPrimaryTextStyle(color: Colors.white)),

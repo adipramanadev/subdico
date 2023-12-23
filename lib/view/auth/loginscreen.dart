@@ -43,11 +43,11 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Let\'s Sign You In',
+              Text('Login',
                   style: hsBoldTextStyle(
                       size: headingFontSize, weight: FontWeight.bold)),
               SizedBox(height: 16),
-              Text('Welcome back, you\'ve \nbeen missed!',
+              Text('Selamat Datang Kembali, Silahkan Login',
                   style: hsSecondaryTextStyle(size: subHeadingFontSize)),
               SizedBox(height: 30),
               TextField(
@@ -64,17 +64,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: hsPrimaryTextStyle(),
                 obscureText: obscure,
                 decoration: commonInputDecoration(
-                    hintText: 'Password',
-                    suffix: GestureDetector(
-                      child: Icon(
-                        obscure ? Icons.visibility : Icons.visibility_off,
-                        color: Colors.grey,
-                      ),
-                      onTap: () {
-                        obscure = !obscure;
-                        setState(() {});
-                      },
-                    )),
+                  hintText: 'Password',
+                  suffix: GestureDetector(
+                    child: Icon(
+                      obscure ? Icons.visibility : Icons.visibility_off,
+                      color: Colors.grey,
+                    ),
+                    onTap: () {
+                      obscure = !obscure;
+                      setState(() {});
+                    },
+                  ),
+                ),
                 onChanged: (value) {},
               ),
               SizedBox(height: 16),
@@ -91,11 +92,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           setState(() {});
                         },
                       ),
-                      Text('Remember Me', style: hsBoldTextStyle()),
+                      Text('Ingatkan Saya ', style: hsBoldTextStyle()),
                     ],
                   ),
                   GestureDetector(
-                    child: Text('Forgot Password?',
+                    child: Text('Lupa Password?',
                         style: hsBoldTextStyle(color: secondaryColor)),
                     onTap: () {
                       // Navigator.push(
@@ -131,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 16),
               Align(
                   alignment: Alignment.center,
-                  child: Text('OR',
+                  child: Text('Atau',
                       style: hsSecondaryTextStyle(
                           color: Colors.grey, weight: FontWeight.bold))),
               SizedBox(height: 16),
@@ -145,7 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       Image.asset(ic_google, height: 30, width: 30),
                       SizedBox(width: 16),
-                      Text('Continue with Google', style: hsBoldTextStyle()),
+                      Text('Lanjutkan Dengan Google', style: hsBoldTextStyle()),
                     ],
                   ),
                   style: ElevatedButton.styleFrom(
@@ -163,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Text('Don\'t have an account?',
                       style: hsSecondaryTextStyle(size: 16)),
-                  SizedBox(width: 4),
+                  const SizedBox(width: 4),
                   GestureDetector(
                     child: Text('Sign Up',
                         style: hsBoldTextStyle(color: secondaryColor)),

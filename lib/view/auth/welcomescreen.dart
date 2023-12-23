@@ -27,7 +27,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Welcome',
+              Text('Selamat Datang',
                   style: hsBoldTextStyle(
                       weight: FontWeight.bold, size: headingFontSize)),
               SizedBox(height: 16),
