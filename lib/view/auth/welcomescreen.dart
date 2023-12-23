@@ -6,6 +6,7 @@ import '../../utils/app_colors.dart';
 import '../../utils/app_common.dart';
 import '../../utils/app_constants.dart';
 import '../../utils/app_data_helpers.dart';
+import 'otpverificationscreen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -70,7 +71,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 keyboardType: TextInputType.phone,
                 style: hsPrimaryTextStyle(),
                 decoration: InputDecoration(
-                  hintText: 'Phone number',
+                  hintText: 'Nomor Handphone',
                   hintStyle: hsSecondaryTextStyle(),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: borderColor, width: 1),
@@ -94,12 +95,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) {},
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return OtpVersifications();
+                        },
+                      ),
+                    );
                   },
                   child: Text('Lanjutkan',
                       style: hsPrimaryTextStyle(color: Colors.white)),

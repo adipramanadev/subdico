@@ -14,10 +14,10 @@ ButtonStyle primaryButtonStyle({Color? color, Color? textColor}) {
 
 ButtonStyle secondaryButtonStyle() {
   return TextButton.styleFrom(
-    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: borderColor)),
+        side: const BorderSide(color: borderColor)),
     elevation: 0,
     backgroundColor: Colors.white,
     shadowColor: Colors.transparent,
