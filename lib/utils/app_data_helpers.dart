@@ -3,11 +3,52 @@ import 'package:subdico/models/submodel.dart';
 import 'package:subdico/utils/app_assets.dart';
 import 'package:subdico/utils/app_colors.dart';
 
+import '../view/history/historyscreen.dart';
+import '../view/home/cleaning_service.dart';
+import '../view/home/homescreen.dart';
+import '../view/home/vechilescreen.dart';
+import '../view/notification/notifications_screen.dart';
+import '../view/profile/addsocialaccount.dart';
 import '../view/profile/faq_screen.dart';
+import '../view/profile/profilescreen.dart';
+import 'app_constants.dart';
+
+List<NavigationItemModel> getNavigationItems() {
+  List<NavigationItemModel> list = [];
+  list.add(
+    NavigationItemModel(
+      icon: Icons.home,
+      title: 'Home',
+      widget: const HomeScreen(),
+    ),
+  );
+  list.add(
+    NavigationItemModel(
+      icon: Icons.history,
+      title: 'History',
+      widget: HistoryScreen(),
+    ),
+  );
+  list.add(
+    NavigationItemModel(
+      icon: Icons.notifications,
+      title: 'Notification',
+      widget: NotificationScreen(),
+    ),
+  );
+  list.add(
+    NavigationItemModel(
+      icon: Icons.person,
+      title: 'Profile',
+      widget: ProfileScreen(),
+    ),
+  );
+  return list;
+}
 
 List<CountryModel> getCountryList() {
   List<CountryModel> list = [];
-  list.add(CountryModel(title: "India (+91)", imagePath: ic_india));
+  list.add(CountryModel(title: "Indonesia (+62)", imagePath: ic_indo));
   list.add(CountryModel(title: "United States (+1)", imagePath: ic_us));
   list.add(CountryModel(title: "United Kingdom (+92)", imagePath: ic_uk));
   return list;
@@ -16,11 +57,11 @@ List<CountryModel> getCountryList() {
 List<ShiftingServiceModel> getShiftingServiceList() {
   List<ShiftingServiceModel> list = [];
   list.add(ShiftingServiceModel(
-      title: 'House', imagePath: ic_house, color: Colors.red));
+      title: 'Rumah', imagePath: ic_house, color: Colors.red));
   list.add(ShiftingServiceModel(
-      title: 'Office', imagePath: ic_office, color: secondaryColor));
+      title: 'Kantor', imagePath: ic_office, color: secondaryColor));
   list.add(ShiftingServiceModel(
-      title: 'Commercial', imagePath: ic_commercial, color: Colors.blue));
+      title: 'Umum', imagePath: ic_commercial, color: Colors.blue));
   return list;
 }
 
@@ -29,7 +70,7 @@ List<OfferAndNewsModel> getOfferAndNewsList() {
   list.add(OfferAndNewsModel(
       title: 'Trending', images: [offer_image1, offer_image2]));
   list.add(OfferAndNewsModel(
-      title: 'Promotion', images: [offer_image3, offer_image4]));
+      title: 'Promosi', images: [offer_image3, offer_image4]));
   list.add(OfferAndNewsModel(
       title: 'Summer Offer', images: [offer_image5, offer_image6]));
   list.add(OfferAndNewsModel(
@@ -63,26 +104,26 @@ List<HistoryModel> getHistoryList() {
 List<ShiftingServiceModel> getOtherServicesList() {
   List<ShiftingServiceModel> list = [];
   list.add(ShiftingServiceModel(
-      title: 'Cleaning',
+      title: 'Bersih Rumah',
       color: greenColor,
       imagePath: ic_cleaning,
       newData: true,
-      widget: HSCleaningServiceScreen(title: 'Cleaning')));
+      widget: CleaningServiceScreen(title: 'Cleaning')));
   list.add(ShiftingServiceModel(
-      title: 'Vehicle',
+      title: 'Kendaraan',
       color: Colors.purple,
       imagePath: ic_vehicle,
-      widget: HSVehicleServiceScreen()));
+      widget: VehicleServiceScreen()));
   list.add(ShiftingServiceModel(
-      title: 'Labour Service',
+      title: 'layanan tenaga kerja',
       color: Colors.blue,
       imagePath: ic_labour,
-      widget: HSCleaningServiceScreen(title: 'Labour')));
+      widget: CleaningServiceScreen(title: 'Labour')));
   list.add(ShiftingServiceModel(
       title: 'Painting',
       color: Colors.pink,
       imagePath: ic_painting,
-      widget: HSCleaningServiceScreen(title: 'Painting')));
+      widget: CleaningServiceScreen(title: 'Painting')));
   return list;
 }
 
@@ -142,7 +183,7 @@ List<SettingModel> getGeneralSettingList() {
       iconData: Icons.person,
       title: 'Add Social Account',
       subTitle: 'Add Facebook, Instagram, Twitter etc',
-      widget: HSAddSocialAccountScreen()));
+      widget: AddSocialAccountScreen()));
   list.add(SettingModel(
       iconData: Icons.wc,
       title: 'Refer to Friends',
