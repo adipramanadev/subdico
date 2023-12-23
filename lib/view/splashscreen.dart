@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:subdico/view/auth/welcomescreen.dart';
 
 class SplasScreen extends StatefulWidget {
   const SplasScreen({super.key});
