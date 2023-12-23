@@ -3,7 +3,9 @@ import 'package:subdico/models/submodel.dart';
 import 'package:subdico/utils/app_assets.dart';
 import 'package:subdico/utils/app_colors.dart';
 
+import '../view/profile/addsocialaccount.dart';
 import '../view/profile/faq_screen.dart';
+import 'app_constants.dart';
 
 List<CountryModel> getCountryList() {
   List<CountryModel> list = [];
@@ -142,7 +144,7 @@ List<SettingModel> getGeneralSettingList() {
       iconData: Icons.person,
       title: 'Add Social Account',
       subTitle: 'Add Facebook, Instagram, Twitter etc',
-      widget: HSAddSocialAccountScreen()));
+      widget: AddSocialAccountScreen()));
   list.add(SettingModel(
       iconData: Icons.wc,
       title: 'Refer to Friends',
