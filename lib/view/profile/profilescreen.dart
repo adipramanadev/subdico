@@ -32,9 +32,9 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 8),
-                  Text('Hannah Turin', style: hsBoldTextStyle()),
+                  Text('Herry Prasetyo', style: hsBoldTextStyle()),
                   SizedBox(height: 4),
-                  Text('hannahturin@gmail.com',
+                  Text('herry081288@gmail.com',
                       style: hsPrimaryTextStyle(color: secondaryColor)),
                   SizedBox(height: 16),
                   TextButton(

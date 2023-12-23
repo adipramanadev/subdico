@@ -71,9 +71,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
         initialActiveIndex: selectedIndex,
         onTap: (index) {
           selectedIndex = index;
-          // setState(
-          //   () {},
-          // );
+          setState(
+            () {},
+          );
         },
       ),
     );
