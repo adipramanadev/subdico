@@ -5,6 +5,7 @@ import '../../utils/app_assets.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_common.dart';
 import '../../utils/app_constants.dart';
+import '../dashboardscreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -118,11 +119,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     //dashboard
-                    // Navigator.push(context, MaterialPageRoute(
-                    //   builder: (context) {
-                    //     return DashboardScreen();
-                    //   },
-                    // ),);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return DashboardScreen();
+                        },
+                      ),
+                    );
                   },
                   child: Text('Login',
                       style: hsPrimaryTextStyle(color: Colors.white)),

@@ -3,11 +3,30 @@ import 'package:subdico/models/submodel.dart';
 import 'package:subdico/utils/app_assets.dart';
 import 'package:subdico/utils/app_colors.dart';
 
+import '../view/history/historyscreen.dart';
 import '../view/home/cleaning_service.dart';
+import '../view/home/homescreen.dart';
 import '../view/home/vechilescreen.dart';
+import '../view/notification/notifications_screen.dart';
 import '../view/profile/addsocialaccount.dart';
 import '../view/profile/faq_screen.dart';
+import '../view/profile/profilescreen.dart';
 import 'app_constants.dart';
+
+List<NavigationItemModel> getNavigationItems() {
+  List<NavigationItemModel> list = [];
+  list.add(NavigationItemModel(
+      icon: Icons.home, title: 'Home', widget: HomeScreen()));
+  list.add(NavigationItemModel(
+      icon: Icons.history, title: 'History', widget: HistoryScreen()));
+  list.add(NavigationItemModel(
+      icon: Icons.notifications,
+      title: 'Notification',
+      widget: NotificationScreen()));
+  list.add(NavigationItemModel(
+      icon: Icons.person, title: 'Profile', widget: ProfileScreen()));
+  return list;
+}
 
 List<CountryModel> getCountryList() {
   List<CountryModel> list = [];
